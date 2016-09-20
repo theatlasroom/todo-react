@@ -7,19 +7,28 @@ import Header from './Components/Header';
 import TodoList from './Components/TodoList';
 import Footer from './Components/Footer';
 
-const ITEMS = [
-  {title: 'Item 1', description: 'This is an item', completed: false},
-  {title: 'Item 2', description: 'This is an item', completed: false},
-  {title: 'Item 3', description: 'This is an item', completed: false},
-  {title: 'Item 4', description: 'This is an item', completed: false},
-];
+
+import ListStore from './stores/ListStore';
+
+//console.log(ListStore);
+
+function getListState(){
+  return {
+    items: ListStore.items
+    //items: {}
+  };
+}
 
 class App extends Component {
   render() {
+    let items = getListState();
+
+    console.log(items);
+
     return (
       <div className="App">
         <Header></Header>
-        <TodoList items={ITEMS}></TodoList>
+        {/* <TodoList items={getListState().items}></TodoList> */}
         <Footer></Footer>
       </div>
     );
