@@ -53,14 +53,17 @@ class TodoListStore extends Store {
       case "CREATE_TODO": {
         const { title, description, completed } = action;
         this.createTodo(title, description, completed);
+        break;
       }
       case "DELETE_TODO": {
         const { id } = action;
         this.deleteTodo(id);
         console.log(this._items);
+        break;
       }
       case "RECEIVED_TODOS": {
         this.reloadTodos(action.todos);
+        break;
       }
     }
   }

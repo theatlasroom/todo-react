@@ -8,11 +8,12 @@ class TodoList extends React.Component {
     super(props);
 
     // create the state for the component
+    console.log("TodoList Constructor");
+    this.reloadTodos();
     this.state = {
       todos: TodoListStore.all() // initialize the state with all the data
     };
 
-    this.reloadTodos();
   }
 
   componentWillMount(){
