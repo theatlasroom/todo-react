@@ -1,6 +1,6 @@
 // expose the dispatcher functionality we need
 import { Dispatcher } from 'flux';
-
+/*
 const flux = new Dispatcher();
 
 export function register(callback) {
@@ -13,4 +13,8 @@ export function unregister(dispatchToken) {
 
 export function dispatch(actionType, action) {
   flux.dispatch(actionType, action);
-}
+}*/
+
+
+// use the deafult dispatcher for now
+export default new Dispatcher;

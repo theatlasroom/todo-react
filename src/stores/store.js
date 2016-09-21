@@ -7,6 +7,8 @@ const vent = {
 
 export default class Store extends EventEmitter {
   emitChange() {
+    console.log();
+    console.log(`${this.constructor.name} store changed!`);
     this.emit(vent.CHANGE_EVENT);
   }
   addChangeListener(callback) {

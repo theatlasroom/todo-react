@@ -8,7 +8,7 @@ import TodoList from './Components/TodoList';
 import Footer from './Components/Footer';
 
 
-import ListStore from './stores/ListStore';
+/*import ListStore from './stores/TodoListStore';
 
 //console.log(ListStore);
 
@@ -17,18 +17,18 @@ function getListState(){
     items: ListStore.items
     //items: {}
   };
-}
+}*/
 
 class App extends Component {
   render() {
-    let items = getListState();
-
-    console.log(items);
+    //let items = getListState();
+    //console.log(items);
 
     return (
       <div className="App">
         <Header></Header>
         {/* <TodoList items={getListState().items}></TodoList> */}
+        <TodoList></TodoList>
         <Footer></Footer>
       </div>
     );
